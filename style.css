@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  border: 0;
+}
+
+.all {
+  background-image: url(Resources/Pictures/backround.png);
+}
+
+.head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  top: 0;
+  height: 75px;
+  width: 100%;
+  text-align: center;
+  z-index: 100;
+  padding: 0;
+  background-color: #cf66cf;
+  margin-bottom: 10px;
+}
+
+.title {
+  background-color: #cf66cf;
+  color: #0e71b8;
+  margin-left: 10px;
+}
+
+.profilePic {
+  background-color: #cf66cf;
+  height: 75px;
+  width: 75px;
+  float: right;
+  margin-left: 67%;
+  border-radius: 5rem;
+}
+
+.playerCard {
+  margin: 3%;
+  outline-color: black;
+  outline-style: solid;
+  border-radius: 70px;
+  background-color: #38bbe7;
+}
+
+.playerExample1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  top: 0;
+  height: 75px;
+  width: 100%;
+  text-align: center;
+  z-index: 100;
+  padding: 0;
+  background-color: #38bbe7;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.name {
+  background-color: #38bbe7;
+  color: #0e71b8;
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: large;
+}
+
+.userPic {
+  background-color: #38bbe7;
+  height: 75px;
+  width: 75px;
+  float: right;
+  margin-left: 20%;
+  border-radius: 5rem;
+}
+
+.noEntry {
+  background-color: #38bbe7;
+  height: 75px;
+  width: 75px;
+  float: right;
+  margin-left: 20%;
+}
+/*# sourceMappingURL=style.css.map */

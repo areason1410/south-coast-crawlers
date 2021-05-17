@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  border: 0;
+}
+
+.all {
+  background-image: url(Resources/Pictures/backround.png);
+}
+
+.head {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  top: 0;
+  height: 75px;
+  width: 100%;
+  text-align: center;
+  z-index: 100;
+  padding: 0;
+  background-color: rgb(207, 102, 207);
+  margin-bottom: 10px;
+}
+
+.title {
+  background-color: rgb(207, 102, 207);
+  color: #0e71b8;
+  margin-left: 10px;
+}
+
+.profilePic {
+  background-color: rgb(207, 102, 207);
+  height: 75px;
+  width: 75px;
+  float: right;
+  margin-left: 67%;
+  border-radius: 5rem;
+}
+
+.playerCard {
+  margin: 3%;
+  outline-color: black;
+  outline-style: solid;
+  border-radius: 70px;
+  background-color: rgb(56, 187, 231);
+}
+
+.playerExample1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  top: 0;
+  height: 75px;
+  width: 100%;
+  text-align: center;
+  z-index: 100;
+  padding: 0;
+  background-color: rgb(56, 187, 231);
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.name {
+  background-color: rgb(56, 187, 231);
+  color: #0e71b8;
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: large;
+}
+
+.userPic {
+  background-color: rgb(56, 187, 231);
+  height: 75px;
+  width: 75px;
+  float: right;
+  margin-left: 20%;
+  border-radius: 5rem;
+}
+
+.noEntry {
+  background-color: rgb(56, 187, 231);
+  height: 75px;
+  width: 75px;
+  float: right;
+  margin-left: 20%;
+}
