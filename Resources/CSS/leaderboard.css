@@ -1,0 +1,28 @@
+*{ 
+    background-image: url("resources/images/background.png");
+}
+
+.firstPlace {
+    display: flex;
+    word-spacing: 30px;
+}
+
+.secondPlace {
+    display: flex;
+    word-spacing: 30px;
+}
+
+.thirdPlace {
+    display: flex;
+    word-spacing: 30px;
+}
+
+.fourthPlace {
+    display: flex;
+    word-spacing: 30px;
+}
+
+.fifthPlace {
+    display: flex;
+    word-spacing: 30px;
+}
