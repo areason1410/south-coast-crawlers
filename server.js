@@ -14,9 +14,10 @@ const mongoose = require("mongoose")
 
 app.use(express.json());
 
+app.use('/static', express.static('public'))
 
-app.get("/", (req, res) =>{
-    res.sendFile(path.join(__dirname, "index.html"))
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "static/index.html"))
 })
 
 app.listen(3000, () => console.log("server started"));
