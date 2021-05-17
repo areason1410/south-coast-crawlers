@@ -14,10 +14,10 @@ const mongoose = require("mongoose")
 
 app.use(express.json());
 
-app.use('/static', express.static('public'))
+app.use(express.static(__dirname + 'public')); //Serves resources from public folder
 
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "static/index.html"))
+    res.sendFile(path.join(__dirname, "public/index.html"))
 })
 
-app.listen(3000, () => console.log("server started"));
+app.listen(3000, () => console.log("server started on port 3000"));
