@@ -1,26 +1,30 @@
 
-
 .firstPlace {
     display: flex;
     word-spacing: 30px;
+    height: 10px;
 }
 
 .secondPlace {
     display: flex;
     word-spacing: 30px;
+    height: 10px;
 }
 
 .thirdPlace {
     display: flex;
     word-spacing: 30px;
+    height: 10px
 }
 
 .fourthPlace {
     display: flex;
     word-spacing: 30px;
+    height: 10px;
 }
 
 .fifthPlace {
     display: flex;
     word-spacing: 30px;
+    height: 10px;
 }
