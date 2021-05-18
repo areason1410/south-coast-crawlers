@@ -1,0 +1,53 @@
+body:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 0%;
+  background: radial-gradient(
+      circle at top right,
+      #d54ab255,
+      rgba(255, 0, 0, 0) 70.71%
+    ),
+    radial-gradient(circle at top left, #e2454255, rgba(0, 0, 255, 0) 70.71%),
+    radial-gradient(circle at bottom left, #5b905855, rgba(0, 255, 0, 0) 70.71%),
+    radial-gradient(
+      circle at bottom right,
+      #2b32e455,
+      rgba(0, 255, 0, 0) 70.71%
+    );
+}
+
+.title {
+  font-size: 29px;
+  margin-top: 0;
+}
+
+#imgContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.profilePicture {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  border-radius: 7px;
+  background: rgb(187, 189, 246);
+  background: linear-gradient(
+    299deg,
+    rgba(187, 189, 246, 1) 0%,
+    rgba(234, 167, 218, 1) 37%,
+    rgba(235, 131, 129, 1) 100%
+  );
+}
