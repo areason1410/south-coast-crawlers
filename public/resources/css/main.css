@@ -4,6 +4,30 @@
     box-sizing: border-box;
 }
 
+body:before {
+  content: '';
+  position:absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 0%;
+  background:
+  radial-gradient(circle at top, 
+    #faf4f877, rgba(255,0,0,0) 70.71%),
+    radial-gradient(circle at top right, 
+    #fa90e077, rgba(255,0,0,0) 70.71%), 
+    radial-gradient(circle at top left, 
+    #ff7e7e77, rgba(0,0,255,0) 70.71%), 
+    radial-gradient(circle at bottom left, 
+    #aaf7a677, rgba(0,255,0,0) 70.71%), 
+         radial-gradient(circle at bottom right, 
+         #8387fd77, rgba(0,255,0,0) 70.71%);
+}
+
 .test {
     background-color: rgb(90, 1, 90);
     color: rgb(240, 240, 240);
