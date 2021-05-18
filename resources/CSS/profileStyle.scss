@@ -23,9 +23,18 @@ body:before {
     );
 }
 
+.topBar {
+  display: flex;
+}
 .title {
   font-size: 29px;
+  font-family: "Nunito Sans", sans-serif;
   margin-top: 0;
+}
+
+#infoContainer {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 20px;
 }
 
 #imgContainer {
@@ -40,8 +49,11 @@ body:before {
 }
 
 .button {
+  font-family: "Nunito Sans", sans-serif;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  line-height: 0.1px;
   border-radius: 7px;
   background: rgb(187, 189, 246);
   background: linear-gradient(

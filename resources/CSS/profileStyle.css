@@ -12,9 +12,21 @@ body:before {
   background: radial-gradient(circle at top right, #d54ab255, rgba(255, 0, 0, 0) 70.71%), radial-gradient(circle at top left, #e2454255, rgba(0, 0, 255, 0) 70.71%), radial-gradient(circle at bottom left, #5b905855, rgba(0, 255, 0, 0) 70.71%), radial-gradient(circle at bottom right, #2b32e455, rgba(0, 255, 0, 0) 70.71%);
 }
 
+.topBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .title {
   font-size: 29px;
+  font-family: "Nunito Sans", sans-serif;
   margin-top: 0;
+}
+
+#infoContainer {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 20px;
 }
 
 #imgContainer {
@@ -33,12 +45,18 @@ body:before {
 }
 
 .button {
+  font-family: "Nunito Sans", sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 0.1px;
   border-radius: 7px;
   background: #bbbdf6;
   background: linear-gradient(299deg, #bbbdf6 0%, #eaa7da 37%, #eb8381 100%);
