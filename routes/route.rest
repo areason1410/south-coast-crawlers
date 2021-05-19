@@ -10,10 +10,12 @@ POST http://localhost:3000/south-coast-crawlers/accounts
 Content-Type: application/json
 
 {
-    "username": "example2",
-    "name": "example2 name",
-    "email": "emai2l@emailsite.co.uk",
-    "password": "tobehashed2"
+    "username": "example",
+    "name": "example name",
+    "email": "email@emailsite.co.uk",
+    "password": "tobehashed"
 }
 
-DELETE http://localhost:3000/south-coast-crawlers/accounts/60a570d9e08bebc31c77cb7e
+###
+
+DELETE http://localhost:3000/south-coast-crawlers/accounts/60a57b5ac08931ee38405085
