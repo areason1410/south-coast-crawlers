@@ -1,3 +1,5 @@
+@import url(fonts.css);
+
 * {
     padding: 0;
     margin: 0;
@@ -17,18 +19,27 @@ body:before {
   border-radius: 0%;
   background:
   radial-gradient(circle at top, 
-    #faf4f877, rgba(255,0,0,0) 70.71%),
+    #faf4f8bb, rgba(255,0,0,0) 70.71%),
     radial-gradient(circle at top right, 
-    #fa90e077, rgba(255,0,0,0) 70.71%), 
+    #fa90e0bb, rgba(255,0,0,0) 70.71%), 
     radial-gradient(circle at top left, 
-    #ff7e7e77, rgba(0,0,255,0) 70.71%), 
+    #ff7e7ebb, rgba(0,0,255,0) 70.71%), 
     radial-gradient(circle at bottom left, 
-    #aaf7a677, rgba(0,255,0,0) 70.71%), 
+    #aaf7a6bb, rgba(0,255,0,0) 70.71%), 
          radial-gradient(circle at bottom right, 
-         #8387fd77, rgba(0,255,0,0) 70.71%);
+         #8387fdbb, rgba(0,255,0,0) 70.71%);
+         z-index: -1000;
 }
 
-.test {
-    background-color: rgb(90, 1, 90);
-    color: rgb(240, 240, 240);
+.topbar {
+    background-color: rgba(255, 255, 255, 0.301);
+    color: dark-grey;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.topbar h1 {
+  font-family: 'Nunito', sans-serif;
 }
