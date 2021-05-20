@@ -35,7 +35,7 @@
 
         try{
             const newAccount = await account.save();
-            res.status(201).json(newAccount);
+            res.status(201).json({message: "Created Account", account: newAccount});
         }catch(err){
             res.status(400).json({message:err})
         }
