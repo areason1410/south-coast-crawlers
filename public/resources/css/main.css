@@ -1,4 +1,5 @@
 @import url(fonts.css);
+@import url(colours.css);
 
 * {
     padding: 0;
@@ -17,18 +18,18 @@ body:before {
   width: 100%;
   height: 100%;
   border-radius: 0%;
+  z-index: -1000;
   background:
   radial-gradient(circle at top, 
-    #faf4f8bb, rgba(255,0,0,0) 70.71%),
+    var(--gradient-1), rgba(255,0,0,0) 70.71%),
     radial-gradient(circle at top right, 
-    #fa90e0bb, rgba(255,0,0,0) 70.71%), 
+    var(--gradient-2), rgba(255,0,0,0) 70.71%), 
     radial-gradient(circle at top left, 
-    #ff7e7ebb, rgba(0,0,255,0) 70.71%), 
+    var(--gradient-3), rgba(0,0,255,0) 70.71%), 
     radial-gradient(circle at bottom left, 
-    #aaf7a6bb, rgba(0,255,0,0) 70.71%), 
+    var(--gradient-4), rgba(0,255,0,0) 70.71%), 
          radial-gradient(circle at bottom right, 
-         #8387fdbb, rgba(0,255,0,0) 70.71%);
-         z-index: -1000;
+         var(--gradient-5), rgba(0,255,0,0) 70.71%);
 }
 
 .topbar {
