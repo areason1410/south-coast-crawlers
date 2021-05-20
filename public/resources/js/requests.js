@@ -11,14 +11,17 @@
       //   attach a .then after calling the function        //
       //   this would be the same as the last .then         //
       //                                                    //
+      //   Also, if you are going to be using GET dont      //
+      //   worry about filling in the last parameter        //
+      //                                                    //
       //-------------------- HOW TO USE --------------------//
 
-      
+
     //a set of all the requests, this makes checking if you gave
     //a valid request easier
     const requests = new Set(["GET", "POST", "DELETE", "PATCH", "PUT"])
 
-    async function databaseRequest(url, data = {}, type="") {
+    async function databaseRequest(url, type="", data={}) {
         
         //so you dont have to worry about caps
         type = type.toUpperCase();
