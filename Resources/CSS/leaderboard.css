@@ -1,30 +1,79 @@
+*{
+    font-family: 'Nunito Sans', sans-serif;
 
-.firstPlace {
+} 
+
+body:before {
+  content: '';
+  position:absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 0%;
+  background:
+    radial-gradient(circle at top right, 
+    #D54AB255, rgba(255,0,0,0) 70.71%), 
+    radial-gradient(circle at top left, 
+    #E2454255, rgba(0,0,255,0) 70.71%), 
+    radial-gradient(circle at bottom left, 
+    #5B905855, rgba(0,255,0,0) 70.71%), 
+         radial-gradient(circle at bottom right, 
+         #2B32E455, rgba(0,255,0,0) 70.71%);
+}
+
+.aPosition{
     display: flex;
-    word-spacing: 30px;
+    /* flex-direction: co;    */
+    display: grid;
+    grid-template-areas: "position name points";
+    /* grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3 minmax(0, 1fr)); */ 
+    grid-auto-columns: 1fr;
+    grid-auto-flow: column;
+    margin-top: 0.5rem;
+    margin-bottom: 00.5rem;
+    width: 100%;
+}
+
+.postion {
+    display: flex;
+    border-bottom: 2px;
+    grid-area: points;
+    justify-content: center; 
+    align-items: center;
+}
+
+.icon{
+    display: flex;
+    border-bottom: 2px;
+    grid-area: points;
+    justify-content: center; 
+    align-items: center;
     height: 10px;
 }
 
-.secondPlace {
+.name {
     display: flex;
-    word-spacing: 30px;
-    height: 10px;
+    border-bottom: 2px;
+    grid-area: points;
+    justify-content: center; 
+    align-items: center;   
 }
 
-.thirdPlace {
-    display: flex;
-    word-spacing: 30px;
-    height: 10px
+.navBar {
+    background-image: linear-gradient(to bottom right, #BBBDF6, #F5D5ED,#BBBDF6, #F5D5ED);
 }
 
-.fourthPlace {
+.menu {
     display: flex;
-    word-spacing: 30px;
-    height: 10px;
+    image spacing: 10fr;
+    word-spacing: 10px
 }
 
-.fifthPlace {
-    display: flex;
-    word-spacing: 30px;
-    height: 10px;
+.text {
+    word-spacing: 33.333rem;
 }
