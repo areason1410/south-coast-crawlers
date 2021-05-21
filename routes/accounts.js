@@ -19,7 +19,7 @@
 
     //get a single account
     router.get("/:id", getAccount, (req,res) => {
-        res.send(hash.decrypt({encryptedData: res.account.password, iv: res.account.iv}))
+        res.send(res.account);
     
     })
 
