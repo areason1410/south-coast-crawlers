@@ -1,0 +1,21 @@
+GET http://localhost:3000/south-coast-crawlers/accounts/
+
+###
+
+GET http://localhost:3000/south-coast-crawlers/accounts/60a3b889ebb1845ded3f9b32
+
+###
+
+POST http://localhost:3000/south-coast-crawlers/accounts
+Content-Type: application/json
+
+{
+    "username": "example",
+    "name": "example name",
+    "email": "email@emailsite.co.uk",
+    "password": "tobehashed"
+}
+
+###
+
+DELETE http://localhost:3000/south-coast-crawlers/accounts/60a57b5ac08931ee38405085

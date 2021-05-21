@@ -1,0 +1,27 @@
+{
+  "name": "south-coast-crawlers",
+  "version": "1.0.0",
+  "description": "Meerkat Cult forever",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/areason1410/south-coast-crawlers.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/areason1410/south-coast-crawlers/issues"
+  },
+  "homepage": "https://github.com/areason1410/south-coast-crawlers#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.12.9"
+  },
+  "devDependencies": {
+    "dotenv": "^9.0.2",
+    "nodemon": "^2.0.7"
+  }
+}
