@@ -3,20 +3,25 @@
 
     const crypto = require("crypto")
     const algorithm = "aes-256-ctr"
-    const password = "jkHdfkSitu"
-
+    const password = "00827991492978443884765542754293" // a random 32bit number
+    
     exports.encrypt =  function(text){
-        var cipher = crypto.createCipher(algorithm,password)
-        var crypted = cipher.update(text,'utf8','hex')
-        crypted += cipher.final('hex');
-        return crypted;
+        const iv = crypto.randomBytes(16);
+        var cipher = crypto.createCipheriv(algorithm, Buffer.from(password), iv);
+        var encrypted = cipher.update(text);
+        encrypted = Buffer.concat([encrypted, cipher.final()]);
+        return { iv: iv.toString('hex'),
+            encryptedData: encrypted.toString('hex') };
     }
     
     exports.decrypt = function(text){
-        var decipher = crypto.createDecipher(algorithm,password)
-        var dec = decipher.update(text,'hex','utf8')
-        dec += decipher.final('utf8');
-        return dec;
+        var iv = Buffer.from(text.iv, 'hex');
+        var encryptedText = Buffer.from(text.encryptedData, 'hex');
+        var decipher = crypto.createDecipheriv(algorithm, Buffer.from(password), iv);
+        var decrypted = decipher.update(encryptedText);
+        decrypted = Buffer.concat([decrypted, decipher.final()]);
+        
+        return decrypted.toString();
     }
     
 //--------------------------- hash ---------------------------//

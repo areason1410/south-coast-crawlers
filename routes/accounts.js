@@ -19,19 +19,21 @@
 
     //get a single account
     router.get("/:id", getAccount, (req,res) => {
-        res.send(res.account)
+        res.send(hash.decrypt({encryptedData: res.account.password, iv: res.account.iv}))
     
     })
 
     //create an account
     router.post("/", async (req,res) => {
+        const hashed = hash.encrypt(req.body.password)
         const account = new Account({
             username: req.body.username,
             name: req.body.name,
             email: req.body.email,
-            password: req.body.password,
+            password: hashed.encryptedData,
             isAdmin: req.body.isAdmin,
-            creationDate: req.body.creationDate
+            creationDate: req.body.creationDate,
+            iv: hashed.iv
         })
 
         try{
