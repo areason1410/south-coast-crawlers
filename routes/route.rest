@@ -18,4 +18,31 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:3000/south-coast-crawlers/accounts/60a57b5ac08931ee38405085
+DELETE http://localhost:3000/south-coast-crawlers/accounts
+
+
+--------------------------------------------------------------------------------------
+###
+
+GET http://localhost:3000/south-coast-crawlers/events
+
+###
+
+GET http://localhost:3000/south-coast-crawlers/events/60a7b83cd0788cb640e21870
+
+###
+
+POST http://localhost:3000/south-coast-crawlers/events
+Content-Type: application/json
+
+{
+    "ownerID": "60a7ea643ea48fea2ab84773",
+    "eventName": "gooasdifj8uashet",
+    "ruleset": "rcsccgb",
+    "startDate": "2021-06-12"
+}
+
+###
+
+DELETE http://localhost:3000/south-coast-crawlers/events/60a7ea643ea48fea2ab84773/60a7ea8f3ea48fea2ab84776
+

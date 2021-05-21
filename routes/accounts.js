@@ -11,7 +11,7 @@
 
 //--------------------------- requests ---------------------------//
 
-    //get all accounts
+    //remember to delete this later this is just for dev
     router.get("/", async (req, res) => {
         const accounts = await Account.find();
         res.json(accounts);
@@ -79,6 +79,6 @@
 //--------------------------- requests ---------------------------//
 
 
-//-------- export --------//
-module.exports = router;
-//-------- export --------//
+//--------- export ---------//
+    module.exports = router;
+//--------- export ---------//
