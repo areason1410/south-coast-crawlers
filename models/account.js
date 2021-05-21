@@ -26,6 +26,10 @@ const accountSchema = new mongoose.Schema({
         type: String,
         required: true,
         default: Date.now()
+    },
+    iv:{
+        type: String,
+        required: true
     }
 })
 
