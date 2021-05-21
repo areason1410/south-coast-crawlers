@@ -4,6 +4,7 @@
     const router     =   express.Router();
     const Account    =   require("../models/account");
     const path       =   require("path");
+    const hash       =   require("../hash")
 
 //---------------- libraries ----------------//
 
@@ -18,7 +19,7 @@
 
     //get a single account
     router.get("/:id", getAccount, (req,res) => {
-        res.send(res.account.name)
+        res.send(res.account)
     
     })
 
