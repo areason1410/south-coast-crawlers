@@ -5,6 +5,10 @@
     margin: 0;
     box-sizing: border-box;
 }
+body{
+    font-family: 'Nunito',sans-serif;
+
+}
 .container{
    position:relative;
    width: 100%;
@@ -20,7 +24,7 @@
 }
 .Header{
     display: flex;
-    font-weight: 800;
+    font-weight: 600;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -29,6 +33,7 @@
     margin-top: 25px;
     margin-left: 0;
     margin-right: 0;
+    
 }
 form{
     display: flex;
@@ -36,14 +41,14 @@ form{
     justify-content: center;
     flex-direction: column;
 }
-.social-media{
+/* .social-media{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-}
+} */
 .title{
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 600;
     color: #444;
     margin-bottom: 10px;
@@ -58,6 +63,7 @@ form{
     display:grid;
     grid-template-columns: 15% 85%;
     padding: 0.2rem;
+    
 }
 .input-field i{
     text-align:center;
@@ -70,8 +76,10 @@ form{
     outline: none;
     border: none;
     line-height: 1;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 1rem;
+    
+    
 }
 .input-field input::placeholder{
     color: #aaa;
@@ -93,18 +101,25 @@ form{
     font-weight: 600;
     margin:10px 0;
     transition: .5s;
-    /*background-color:#bbbdf6;*/
 }
 .btn:hover{
     background-color: #4d84e2; 
 }
-.social-text{
-    font-weight: bold;
-    margin-top: 10px;
-    padding: .7rem 0;
-    font-size: 1rem;
+.FP{
+  margin-left:95px;
+  margin-bottom: 0px;
+  font-size: 12px; 
 }
-
+.SI{
+    font-size: 12px;
+}
+.FP a{
+    text-decoration: none;
+}
+.SI a{
+    text-decoration: none; 
+    
+}
 /* #button3{
     width: 300px;
     height: 49px;
