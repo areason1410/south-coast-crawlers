@@ -11,7 +11,7 @@
 //--------------------------- mongoose ---------------------------//
 
     //connect to the local database using mongodb
-    mongoose.connect("mongodb://localhost/south-coast-crawlers",
+    mongoose.connect("mongodb+srv://s6c:<PASSWORD>@south-coast-crawlers.jx64g.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
     {  useNewUrlParser:      true,
        useUnifiedTopology:   true
     });
