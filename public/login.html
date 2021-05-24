@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="resources/css/background.css">
     <link rel="stylesheet" href="resources/css/fonts.css">
     <link rel="stylesheet" href="resources/css/colours.css">
+    <script defer src="resources/js/requests.js"></script>
     <script
     src="https://kit.fontawesome.com/64d58efce2.js"
     crossorigin="anonymous"
@@ -26,11 +27,11 @@
                 <h2 class="title">Sign In</h2>
                 <div class="input-field">
                     <i class="fas fa-user"></i>
-                    <input type="text" placeholder="Email">
+                    <input id="email" type="text" placeholder="Email">
                 </div>
                 <div class="input-field">
                     <i class="fas fa-lock"></i>
-                    <input type="password" placeholder="Password">
+                    <input id="pass" type="password" placeholder="Password">
                     
                 </div>
                 <div class="FP">
@@ -38,7 +39,7 @@
                         <label id="FP">Forgot Password?</label>
                     </a>
                 </div>
-                <input type="submit" value="Sign In" class="btn solid">
+                <input type="button" value="Sign In" class="btn solid">
                 <div class="SI">
                 Don't have an account? <a href="#" class="SI"><label id="SI">Sign Up.</label></a>
                 </div>
