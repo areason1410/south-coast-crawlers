@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body:before {
+  z-index: -100;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 0%;
+  background: radial-gradient(
+      circle at top right,
+      #f5d5ed,
+      rgba(255, 0, 0, 0) 70.71%
+    ),
+    radial-gradient(circle at top left, #f0a2a1, rgba(0, 0, 255, 0) 70.71%),
+    radial-gradient(circle at bottom left, #b5d0b3, rgba(0, 255, 0, 0) 70.71%),
+    radial-gradient(circle at bottom right, #bbbdf6, rgba(0, 255, 0, 0) 70.71%);
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.title {
+  font-size: 29px;
+  font-family: "Nunito Sans", sans-serif;
+  margin-top: 0;
+}
+
+.material-icons {
+  margin-top: 6px;
+}
