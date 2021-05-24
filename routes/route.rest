@@ -1,4 +1,4 @@
-GET http://localhost:3000/south-coast-crawlers/accounts/
+GET http://localhost:3000/south-coast-crawlers/accounts/test@emailsite.co.uk/5d197c3a69
 
 ###
 
@@ -12,12 +12,14 @@ Content-Type: application/json
 {
     "username": "example",
     "name": "example name",
-    "email": "email@emailsite.co.uk",
-    "password": "tobehashed"
+    "email": "test@emailsite.co.uk",
+    "password": "testa"
 }
 
 ###
-
+60ab60cf4d488c3742cbad5b
+test@emailsite.co.uk
+5d197c3a69
 DELETE http://localhost:3000/south-coast-crawlers/accounts
 
 

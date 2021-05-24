@@ -23,9 +23,22 @@
     
     })
 
+    router.get("/:email/:password",  async (req,res) => {
+        const account = await Account.find({"email": req.params.email});
+        if(hash.decrypt({"encryptedData": toString(account.password),
+         "iv": account.iv}) == req.params.password)
+        {
+            res.send("yep")
+        }
+        else
+        {
+            res.send("nope")
+        }
+    })
+
     //create an account
     router.post("/", async (req,res) => {
-        const hashed = hash.encrypt(req.body.password)
+        const hashed = hash.encrypt(req.bodypassword)
         const account = new Account({
             username: req.body.username,
             name: req.body.name,
