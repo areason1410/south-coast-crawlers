@@ -48,6 +48,6 @@
 
 //--------------------------- requests ---------------------------//
 
-databaseRequest("http://127.0.0.1:5500/profile.HTML"), "GET"
+databaseRequest("http://localhost:3000/south-coast-crawlers/accounts"), "GET"
 .then(data => console.log(data))
 
