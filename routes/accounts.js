@@ -11,7 +11,7 @@
 
 //--------------------------- requests ---------------------------//
 
-    //get all accounts
+    //remember to delete this later this is just for dev
     router.get("/", async (req, res) => {
         const accounts = await Account.find();
         res.json(accounts);
@@ -21,6 +21,21 @@
     router.get("/:id", getAccount, (req,res) => {
         res.send(res.account);
     
+    })
+
+    router.get("/:email/:password",  async (req,res) => {
+        const account = await Account.find({"email": req.params.email});
+        const decryptedPassword = hash.decrypt({"encryptedData": account[0].password,
+        "iv": account[0].iv})
+
+        if(decryptedPassword == req.params.password)
+        {
+            res.send("yep")
+        }
+        else
+        {
+            res.send("nope")
+        }
     })
 
     //create an account
@@ -79,6 +94,6 @@
 //--------------------------- requests ---------------------------//
 
 
-//-------- export --------//
-module.exports = router;
-//-------- export --------//
+//--------- export ---------//
+    module.exports = router;
+//--------- export ---------//
