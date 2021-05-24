@@ -1,4 +1,4 @@
-GET http://localhost:3000/south-coast-crawlers/accounts/test@emailsite.co.uk/5d197c3a69
+GET http://localhost:3000/south-coast-crawlers/accounts/email@emailsite.co.uk/tobehashed
 
 ###
 
@@ -10,10 +10,10 @@ POST http://localhost:3000/south-coast-crawlers/accounts
 Content-Type: application/json
 
 {
-    "username": "example",
-    "name": "example name",
-    "email": "test@emailsite.co.uk",
-    "password": "testa"
+    "username": "example2",
+    "name": "example name2",
+    "email": "test2@emailsite.co.uk",
+    "password": "test2a"
 }
 
 ###
