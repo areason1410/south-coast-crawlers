@@ -52,18 +52,14 @@ router.post("/", async (req,res) => {
 
 //edit an account
 router.patch("/:id", getAccount, async (req, res) => {
-    if (req.body.name != null) {
-        res.account.name = req.body = req.body.name;
+    if (req.body.username != null) {
+        res.account.username = req.body.username;
     }
-    if (req.body.name != null) {
-        res.account.name = req.body = req.body.name;
-    }
-    
     try {
         const updatedAccount = await res.account.save();
         res.json(updatedAccount);
     } catch (err) {
-        res.status(400).json({ message: err.message });
+        res.status(400).json({ res: err.message });
     }
     });
 

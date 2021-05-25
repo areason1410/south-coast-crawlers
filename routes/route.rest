@@ -1,8 +1,8 @@
-GET http://localhost:3000/south-coast-crawlers/accounts/email@emailsite.co.uk/tobehashed
+GET http://localhost:3000/south-coast-crawlers/accounts/
 
 ###
 
-GET http://localhost:3000/south-coast-crawlers/accounts/60a7b83cd0788cb640e21870
+GET http://localhost:3000/south-coast-crawlers/accounts/60a7bc09a4f3c1d60f58d1f9
 
 ###
 
@@ -16,10 +16,20 @@ Content-Type: application/json
 }
 
 ###
+
+PATCH http://localhost:3000/south-coast-crawlers/accounts/60a7bc09a4f3c1d60f58d1f9
+Content-Type: application/json
+
+{
+    "username": "bum"
+}
+
+
+###
 60ab60cf4d488c3742cbad5b
 test@emailsite.co.uk
 5d197c3a69
-DELETE http://localhost:3000/south-coast-crawlers/accounts
+DELETE http://localhost:3000/south-coast-crawlers/accounts/
 
 
 --------------------------------------------------------------------------------------
