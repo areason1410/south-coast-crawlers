@@ -41,7 +41,7 @@ GET http://localhost:3000/south-coast-crawlers/events
 
 ###
 
-GET http://localhost:3000/south-coast-crawlers/events/60a7b83cd0788cb640e21870
+GET http://localhost:3000/south-coast-crawlers/events/60a7ea643ea48fea2ab84773
 
 ###
 
@@ -57,5 +57,15 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:3000/south-coast-crawlers/events/60a7ea643ea48fea2ab84773/60a7ea8f3ea48fea2ab84776
+DELETE http://localhost:3000/south-coast-crawlers/events/60a7ea643ea48fea2ab84773/60ad5462855479b8a4d2b3c5
+
+###
+
+PATCH http://localhost:3000/south-coast-crawlers/events/60ab6bac861e918a606f942f
+Content-Type: application/json
+
+{
+    "eventName": "yabbungus",
+    "moderators" : ["test", "test"]
+}
 

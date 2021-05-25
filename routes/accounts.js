@@ -76,18 +76,7 @@
 
     //edit an account
     router.patch("/:id", getAccount, async (req, res) => {
-        if (req.body.username != null) {
-            res.account.username = req.body.username;
-        }
-        if (req.body.email != null) {
-            res.account.email = req.body.email;
-        }
-        if (req.body.password != null) {
-            res.account.password = req.body.password;
-        }
-        if (req.body.isAdmin != null) {
-            res.account.isAdmin = req.body.isAdmin;
-        }
+        patchParameterCheck(req, res);
         try {
             const updatedAccount = await res.account.save();
             res.json(updatedAccount);
@@ -96,27 +85,6 @@
         }
         });
 
-    //edit an account
-    router.patch("/:id", getAccount, async (req, res) => {
-        if (req.body.username != null) {
-            res.account.username = req.body.username;
-        }
-        if (req.body.email != null) {
-            res.account.email = req.body.email;
-        }
-        if (req.body.password != null) {
-            res.account.password = req.body.password;
-        }
-        if (req.body.isAdmin != null) {
-            res.account.isAdmin = req.body.isAdmin;
-        }
-        try {
-            const updatedAccount = await res.account.save();
-            res.json(updatedAccount);
-        } catch (err) {
-            res.status(400).json({ res: err.message });
-        }
-        });
 
     //delete an account
     router.delete("/:id", getAccount, async (req,res) => {
@@ -128,6 +96,23 @@
         }
     })
 
+        //function to check parameters for patch, refactored into a function
+    function patchParameterCheck(req, res) {
+        if (req.body.username != null) {
+            res.account.username = req.body.username;
+        }
+        if (req.body.email != null) {
+            res.account.email = req.body.email;
+        }
+        if (req.body.password != null) {
+            res.account.password = req.body.password;
+        }
+        if (req.body.isAdmin != null) {
+            res.account.isAdmin = req.body.isAdmin;
+        }
+    }
+
+    //middleware
     async function getAccount(req, res, next){
 
         let account;
@@ -143,6 +128,7 @@
         next();
     }
 
+    //middleware
     async function checkPassword(req, res, next){
         var passwordCheck = false;
         try{
@@ -163,9 +149,12 @@
         res.passwordCheck = passwordCheck;
         next();
     }
+
 //--------------------------- requests ---------------------------//
 
 
 //--------- export ---------//
+
     module.exports = router;
+    
 //--------- export ---------//
