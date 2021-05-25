@@ -48,6 +48,39 @@ router.post("/", async (req,res) => {
     }
 })
 
+<<<<<<< HEAD
+=======
+    router.get("/:email/:password", checkPassword, async (req,res) => {
+<<<<<<< HEAD
+       res.send({res: res.passwordCheck});
+    })
+=======
+        res.send({res: res.passwordCheck});
+     })
+>>>>>>> f885f9d15d8f61d5ff47af3dfd9716eb3c9b43cc
+
+    //create an account
+    router.post("/", async (req,res) => {
+        const hashed = hash.encrypt(req.body.password)
+        const account = new Account({
+            username: req.body.username,
+            profilePicture: req.body.profilePicture,
+            email: req.body.email,
+            password: hashed.encryptedData,
+            isAdmin: req.body.isAdmin,
+            creationDate: req.body.creationDate,
+            iv: hashed.iv
+        })
+
+        try{
+            const newAccount = await account.save();
+            res.status(201).json({res: "Created Account", account: newAccount});
+        }catch(err){
+            res.status(400).json({res:err})
+        }
+    })
+    
+>>>>>>> alpha
 
 
 //edit an account
@@ -73,6 +106,7 @@ router.delete("/:id", getAccount, async (req,res) => {
     }
 })
 
+<<<<<<< HEAD
 async function getAccount(req, res, next){
 
     let account;
@@ -80,6 +114,18 @@ async function getAccount(req, res, next){
         account = await Account.findById(req.params.id);
         if(account == null){
             return res.status(404).json({res: "Cannot find that account"});
+=======
+    async function getAccount(req, res, next){
+
+        let account;
+        try{
+            account = await Account.findById(req.params.id);
+            if(account == null){
+                return res.status(404).json({res: "Cannot find that account"});
+            }
+        }catch(err){
+            return res.status(500).json({res: err.message})
+>>>>>>> alpha
         }
     }catch(err){
         return res.status(500).json({res: err.res})
