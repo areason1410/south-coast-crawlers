@@ -23,37 +23,16 @@
 
     })
 
+    //check if a password is correct
     router.get("/:email/:password", checkPassword, async (req,res) => {
         res.send({res: res.passwordCheck});
     })
 
     //create an account
     router.post("/", async (req,res) => {
+
         const hashed = hash.encrypt(req.body.password)
-        const account = new Account({
-            username: req.body.username,
-            profilePicture: req.body.profilePicture,
-            email: req.body.email,
-            password: hashed.encryptedData,
-            isAdmin: req.body.isAdmin,
-            creationDate: req.body.creationDate,
-            iv: hashed.iv
-        })
-    })
 
-    //get a single account
-    router.get("/:id", getAccount, (req,res) => {
-        res.send(res.account);
-
-    })
-
-    router.get("/:email/:password", checkPassword, async (req,res) => {
-        res.send({res: res.passwordCheck});
-    })
-
-    //create an account
-    router.post("/", async (req,res) => {
-        const hashed = hash.encrypt(req.body.password)
         const account = new Account({
             username: req.body.username,
             profilePicture: req.body.profilePicture,
@@ -64,12 +43,13 @@
             iv: hashed.iv
         })
 
-        try{
+        try {
             const newAccount = await account.save();
             res.status(201).json({res: "Created Account", account: newAccount});
-        }catch(err){
+        } catch(err) {
             res.status(400).json({res:err})
         }
+
     })
 
 
@@ -83,7 +63,7 @@
         } catch (err) {
             res.status(400).json({ res: err.message });
         }
-        });
+    });
 
 
     //delete an account
@@ -96,7 +76,7 @@
         }
     })
 
-        //function to check parameters for patch, refactored into a function
+    //function to check parameters for patch, refactored into a function
     function patchParameterCheck(req, res) {
         if (req.body.username != null) {
             res.account.username = req.body.username;
