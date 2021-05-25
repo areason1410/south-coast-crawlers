@@ -43,7 +43,7 @@
         const hashed = hash.encrypt(req.body.password)
         const account = new Account({
             username: req.body.username,
-            name: req.body.name,
+            profilePicture: req.body.profilePicture,
             email: req.body.email,
             password: hashed.encryptedData,
             isAdmin: req.body.isAdmin,
