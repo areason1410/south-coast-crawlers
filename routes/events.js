@@ -2,7 +2,7 @@
 
     const express    =   require("express");
     const router     =   express.Router();
-    const Event    =   require("../models/event");
+    const Event      =   require("../models/event");
     const path       =   require("path");
 
 //---------------- libraries ----------------//
