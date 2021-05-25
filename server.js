@@ -4,14 +4,14 @@
     const express    =   require("express");
     const app        =   express();
     const mongoose   =   require("mongoose");
-
+    require("dotenv").config()
 //---------------- libraries ----------------//
 
 
 //--------------------------- mongoose ---------------------------//
 
     //connect to the local database using mongodb
-    mongoose.connect("mongodb://localhost/south-coast-crawlers",
+    mongoose.connect(process.env.DB_URL,
     {  useNewUrlParser:      true,
        useUnifiedTopology:   true
     });
