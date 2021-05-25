@@ -10,10 +10,9 @@ POST http://localhost:3000/south-coast-crawlers/accounts
 Content-Type: application/json
 
 {
-    "username": "aaron",
-    "name": "aaron",
-    "email": "t",
-    "password": "t"
+    "username": "example2",
+    "email": "test2@emailsite.co.uk",
+    "password": "test2a"
 }
 
 ###
