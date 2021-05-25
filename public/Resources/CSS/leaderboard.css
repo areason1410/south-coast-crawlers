@@ -73,9 +73,9 @@
 }
 
 .menu {
-    grid-template-rows: 70px;
+    grid-template-rows: 1.2rem;
 }
 
 .text {
-
+    grid-template-rows: 30px;
 }
