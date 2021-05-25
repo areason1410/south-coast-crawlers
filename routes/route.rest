@@ -10,22 +10,9 @@ POST http://localhost:3000/south-coast-crawlers/accounts
 Content-Type: application/json
 
 {
-<<<<<<< HEAD
     "username": "example2",
     "email": "test2@emailsite.co.uk",
     "password": "test2a"
-=======
-<<<<<<< HEAD
-    "username": "aaron",
-    "name": "aaron",
-    "email": "t",
-    "password": "t"
-=======
-    "username": "example2",
-    "email": "test2@emailsite.co.uk",
-    "password": "test2a"
->>>>>>> f885f9d15d8f61d5ff47af3dfd9716eb3c9b43cc
->>>>>>> alpha
 }
 
 ###
@@ -34,7 +21,9 @@ PATCH http://localhost:3000/south-coast-crawlers/accounts/60a7bc09a4f3c1d60f58d1
 Content-Type: application/json
 
 {
-    "username": "bum"
+    "username": "changed username test",
+    "isAdmin": true,
+    "email": "changedemail@emailsite.co.uk"
 }
 
 
@@ -70,16 +59,3 @@ Content-Type: application/json
 
 DELETE http://localhost:3000/south-coast-crawlers/events/60a7ea643ea48fea2ab84773/60a7ea8f3ea48fea2ab84776
 
-<<<<<<< HEAD
-DELETE http://localhost:3000/south-coast-crawlers/accounts/60a57b5ac08931ee38405085
-
-###
-
-PATCH http://localhost:3000/south-coast-crawlers/accounts
-Content-Type: application/json
-
-{
-    "name: "New Name"
-}
-=======
->>>>>>> 894f24f62ef1829f7f17ef70b08af0aadae41bac
