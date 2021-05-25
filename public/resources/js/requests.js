@@ -48,6 +48,5 @@
 
 //--------------------------- requests ---------------------------//
 
-databaseRequest("http://localhost:3000/south-coast-crawlers/accounts/", "GET")
-.then(data => console.log(data))
+
 
