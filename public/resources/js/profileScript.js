@@ -1,6 +1,7 @@
 databaseRequest("http://localhost:3000/south-coast-crawlers/accounts/60a7bc09a4f3c1d60f58d1f9", "GET")
 .then(data => {
     console.log(data)
+    document.getElementById('imgContainer').src = url(data.profilePicture)
     document.getElementById('profileName').innerHTML = "Name: " + data.name 
     if(data.isAdmin == false) {
         document.getElementById('profileStatus').innerHTML = "Account Status: User"
