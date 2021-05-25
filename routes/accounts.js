@@ -25,15 +25,20 @@ const { read } = require("fs");
     })
 
     router.get("/:email/:password", checkPassword, async (req,res) => {
+<<<<<<< HEAD
        res.send({res: res.passwordCheck});
     })
+=======
+        res.send({res: res.passwordCheck});
+     })
+>>>>>>> f885f9d15d8f61d5ff47af3dfd9716eb3c9b43cc
 
     //create an account
     router.post("/", async (req,res) => {
         const hashed = hash.encrypt(req.body.password)
         const account = new Account({
             username: req.body.username,
-            name: req.body.name,
+            profilePicture: req.body.profilePicture,
             email: req.body.email,
             password: hashed.encryptedData,
             isAdmin: req.body.isAdmin,
@@ -101,7 +106,26 @@ const { read } = require("fs");
         next();
     }
 
+    async function checkPassword(req, res, next){
+        var passwordCheck = false;
+        try{
+            const account = await Account.findOne({"email": req.params.email});
+            if(account == null){
+                return res.status(404).json({res: "Cannot find that account"});
+            }
+            const decryptedPassword = hash.decrypt({"encryptedData": account.password,
+            "iv": account.iv})
 
+            if(decryptedPassword == req.params.password)
+            {
+                passwordCheck = true;
+            }
+        } catch(err) {
+            return res.status(500).json({res: err.message})
+        }
+        res.passwordCheck = passwordCheck;
+        next();
+    }
 //--------------------------- requests ---------------------------//
 
 
