@@ -24,8 +24,8 @@
     /* flex-direction: co;    */
     display: grid;
     grid-template-areas: "position name points";
-    /* grid-template-columns: 1fr 1fr 1fr;
-    grid-template-columns: repeat(3 minmax(0, 1fr)); */ 
+     /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-template-columns: repeat(3 minmax(0, 1fr)); 
     grid-auto-columns: 1fr;
     grid-auto-flow: column;
     margin-top: 0.5rem;
@@ -60,22 +60,22 @@
     align-items: center;
     font-size: 110%;
 }
-
-/* for mobile */
-    
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 45px;
+    font-size: 11px;
+}  
+     
 .navBar {
-   background-image: linear-gradient(to bottom right, #BBBDF6, #F5D5ED,#BBBDF6, #F5D5ED);   
+   background-image: linear-gradient(to bottom right, #BBBDF6, #F5D5ED,#BBBDF6, #F5D5ED);    
    position: fixed;
    left: 0;
    bottom: 0;
-   width: 100%;
-   text-align: center;
+   width: 100%;  
+   justify-content: space-evenly;
+   max-height: 50px;
 }
 
-.menu {
-    grid-template-rows: 1.2rem;
-}
 
-.text {
-    grid-template-rows: 30px;
-}
