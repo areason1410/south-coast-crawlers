@@ -1,6 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap");
+
 * {
   margin: 0;
   border: 0;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 body:before {
@@ -110,11 +113,10 @@ body:before {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px;
 }
 
 .button {
-  width: 150px;
+  width: 170px;
   height: 25px;
   background: rgb(216, 244, 212);
   background: linear-gradient(
@@ -125,4 +127,7 @@ body:before {
   padding: 10px;
   margin: 20px;
   border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
