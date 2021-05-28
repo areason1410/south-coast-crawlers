@@ -60,71 +60,54 @@
     align-items: center;
     font-size: 110%;
 }
+/* 
 .buttons {
     display: flex;
     flex-direction: column;
     align-items: center;
     max-height: 45px;
     font-size: 11px;
-}  
-     
+}   */
+
 .navBar {
-   background-image: linear-gradient(to bottom right, #BBBDF6, #F5D5ED,#BBBDF6, #F5D5ED);    
+   background-image: linear-gradient(to bottom right, #BBBDF6, #F5D5ED,#BBBDF6, #F5D5ED);     
    position: fixed;
    left: 0;
    bottom: 0;
    width: 100%;  
-   justify-content: space-evenly;
-   max-height: 50px;
 }
 
+/*
 .leaderboard {
-    position: absolute;
-    left: 11.73%;
+    position: absolute;  
+    left: 11.73%; 
     right: 80.27%;
-    top: 14%;
-    bottom: 26%;
+    /*top: 14%;
+    bottom: 26%; 
 }
 
 .settings {
-    position: absolute;
+    position: absolute; 
     left: 80.53%;
     right: 11.47%;
-    top: 14%;
-    bottom: 14%;
+    /* top: 14%;
+    bottom: 26%; 
 }
 
 .points {
-    position: absolute;
+    position: absolute; 
     left: 46.13%;
     right: 45.87%;
-    top: 14%;
-    bottom: 26%;
-}
- 
-.textL{
-    /* position: absolute; */
-    width: 63px;
-    height: 15px;
-    left: 27px;
-    top: 37px;
-    font-size: 11px;
+    /* top: 14%;
+    bottom: 26%; */
+}  
+
+.buttons {
+    display: flex;
+    flex-direction: column;
 }
 
-.textP {
-    /* position: absolute; */
-    width: 63px;
-    height: 15px;
-    left: 171px;
-    top: 37px;
-    font-size: 11px;
+.navBar {
+    display: flex;
+    justify-content: space-evenly;
 }
-
-.textS {
-    /* position: absolute; */
-    width: 41px;
-    height: 15px;
-    left: 296px;
-    top: 37px;
-    font-size: 11px;
-}       
