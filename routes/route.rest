@@ -2,7 +2,7 @@ GET http://localhost:3000/south-coast-crawlers/accounts/
 
 ###
 
-GET http://localhost:3000/south-coast-crawlers/accounts/60a3b889ebb1845ded3f9b32
+GET http://localhost:3000/south-coast-crawlers/accounts/60a7bc09a4f3c1d60f58d1f9
 
 ###
 
@@ -10,12 +10,62 @@ POST http://localhost:3000/south-coast-crawlers/accounts
 Content-Type: application/json
 
 {
-    "username": "example",
-    "name": "example name",
-    "email": "email@emailsite.co.uk",
-    "password": "tobehashed"
+    "username": "example2",
+    "email": "test2@emailsite.co.uk",
+    "password": "test2a"
 }
 
 ###
 
-DELETE http://localhost:3000/south-coast-crawlers/accounts/60a57b5ac08931ee38405085
+PATCH http://localhost:3000/south-coast-crawlers/accounts/60a7bc09a4f3c1d60f58d1f9
+Content-Type: application/json
+
+{
+    "username": "changed username test",
+    "isAdmin": true,
+    "email": "changedemail@emailsite.co.uk"
+}
+
+
+###
+60ab60cf4d488c3742cbad5b
+test@emailsite.co.uk
+5d197c3a69
+DELETE http://localhost:3000/south-coast-crawlers/accounts/
+
+
+--------------------------------------------------------------------------------------
+###
+
+GET http://localhost:3000/south-coast-crawlers/events
+
+###
+
+GET http://localhost:3000/south-coast-crawlers/events/60a7ea643ea48fea2ab84773
+
+###
+
+POST http://localhost:3000/south-coast-crawlers/events
+Content-Type: application/json
+
+{
+    "ownerID": "60a7ea643ea48fea2ab84773",
+    "eventName": "gooasdifj8uashet",
+    "ruleset": "rcsccgb",
+    "startDate": "2021-06-12"
+}
+
+###
+
+DELETE http://localhost:3000/south-coast-crawlers/events/60a7ea643ea48fea2ab84773/60ad5462855479b8a4d2b3c5
+
+###
+
+PATCH http://localhost:3000/south-coast-crawlers/events/60ab6bac861e918a606f942f
+Content-Type: application/json
+
+{
+    "eventName": "yabbungus",
+    "moderators" : ["test", "test"]
+}
+

@@ -4,14 +4,14 @@
     const express    =   require("express");
     const app        =   express();
     const mongoose   =   require("mongoose");
-
+    require("dotenv").config()
 //---------------- libraries ----------------//
 
 
 //--------------------------- mongoose ---------------------------//
 
     //connect to the local database using mongodb
-    mongoose.connect("mongodb://localhost/south-coast-crawlers",
+    mongoose.connect(process.env.DB_URL,
     {  useNewUrlParser:      true,
        useUnifiedTopology:   true
     });
@@ -25,9 +25,15 @@
 
 //---------------------------- express ----------------------------//
 
+    //routers
+    const accountRouter = require("./routes/accounts")
+    const eventRouter = require("./routes/events")
+
     //use
     app.use(express.json());
     app.use(express.static('public'));
+    app.use("/south-coast-crawlers/accounts", accountRouter);
+    app.use("/south-coast-crawlers/events", eventRouter);
     
     //webpage directiories
     app.get("/", (req, res) => {
@@ -35,9 +41,6 @@
     })
     //
     
-    //routers
-    const accountRouter = require("./routes/accounts")
-    app.use("/south-coast-crawlers/accounts", accountRouter);
 
 
     app.listen(3000, () => console.log("server started on port 3000"));
