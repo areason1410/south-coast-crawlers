@@ -1,8 +1,8 @@
-GET http://localhost:3000/south-coast-crawlers/accounts/email@emailsite.co.uk/tobehashed
+GET http://localhost:3000/south-coast-crawlers/accounts/
 
 ###
 
-GET http://localhost:3000/south-coast-crawlers/accounts/60a7b83cd0788cb640e21870
+GET http://localhost:3000/south-coast-crawlers/accounts/60a7bc09a4f3c1d60f58d1f9
 
 ###
 
@@ -16,10 +16,22 @@ Content-Type: application/json
 }
 
 ###
+
+PATCH http://localhost:3000/south-coast-crawlers/accounts/60a7bc09a4f3c1d60f58d1f9
+Content-Type: application/json
+
+{
+    "username": "changed username test",
+    "isAdmin": true,
+    "email": "changedemail@emailsite.co.uk"
+}
+
+
+###
 60ab60cf4d488c3742cbad5b
 test@emailsite.co.uk
 5d197c3a69
-DELETE http://localhost:3000/south-coast-crawlers/accounts
+DELETE http://localhost:3000/south-coast-crawlers/accounts/
 
 
 --------------------------------------------------------------------------------------
@@ -29,7 +41,7 @@ GET http://localhost:3000/south-coast-crawlers/events
 
 ###
 
-GET http://localhost:3000/south-coast-crawlers/events/60a7b83cd0788cb640e21870
+GET http://localhost:3000/south-coast-crawlers/events/60a7ea643ea48fea2ab84773
 
 ###
 
@@ -45,5 +57,14 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:3000/south-coast-crawlers/events/60a7ea643ea48fea2ab84773/60a7ea8f3ea48fea2ab84776
+DELETE http://localhost:3000/south-coast-crawlers/events/60a7ea643ea48fea2ab84773/60ad5462855479b8a4d2b3c5
 
+###
+
+PATCH http://localhost:3000/south-coast-crawlers/events/60ab6bac861e918a606f942f
+Content-Type: application/json
+
+{
+    "eventName": "yabbungus",
+    "moderators" : ["test", "test"]
+}
