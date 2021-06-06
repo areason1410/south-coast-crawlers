@@ -83,7 +83,6 @@ form{
 }
 .input-field input::placeholder{
     color: #aaa;
-    font-weight: 500;
 }
 .btn{
     font-size: 15px;
