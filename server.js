@@ -20,7 +20,7 @@
     db.on("error", (error) => console.error(error));
     db.once("open", () => console.log("connected to db"));
 
-//--------------------------- mongoose ---------------------------//
+//--------------------------- mongoose -------﻿--------------------//
 
 
 //---------------------------- express ----------------------------//
@@ -43,7 +43,7 @@
     
 
 
-    app.listen(3000, () => console.log("server started on port 3000"));
+    app.listen(3001, () => console.log("server started on port 3000"));
 
 //---------------------------- express ----------------------------//
 
