@@ -1,8 +1,8 @@
 .signInText {
-    font-size: 20px;
+    font-size: 26px;
     font-weight: 400;
     color: #444;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
     margin-top: 100px;
 }
 
@@ -12,12 +12,23 @@
     border-width: 1px;
     transition: .15s;
     outline: none;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 
 .login {
     color: #fff;
+    background-color:#5995fd;
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
+.login:hover {
+    /* color: pink; */
+    background-color: #4d84e2; 
+}
+
 .container {
     font-family: 'Nunito', sans-serif;
     background: 
@@ -31,4 +42,20 @@
     rgba(170, 247, 166, 0.733), rgba(0,255,0,0) 70.71%), 
     radial-gradient(circle at bottom right, 
     rgba(131, 135, 253, 0.733), rgba(0,255,0,0) 70.71%);
+}
+
+.forgotPassword {
+    margin-right: 25px;
+    font-size: 12px;
+    color: #3464b6;
+
+}
+
+.newAccountBox {
+    font-size: 11px;
+}
+
+.newAccountLink {
+    color: #3464b6;
+    /* font-weight: ; */
 }

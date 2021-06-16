@@ -68,8 +68,22 @@ class Window(Gtk.Window):
         title = Gtk.Label(label="Sign In")
         email = Gtk.Entry()
         password = Gtk.Entry()
+        forgotPassword = Gtk.Label(label="Forgot Password?")
         login = Gtk.Button(label="Sign In")
+        newAccountBox = Gtk.HBox(spacing=0)
+        newAccount = Gtk.Label(label="Dont have an Account?")
+        newAccountLink = Gtk.Label(label=" Sign Up")
 
+        email.set_placeholder_text("Email")
+        password.set_placeholder_text("Password")
+
+        signInContainer.set_size_request(300, 0)
+        email.set_size_request(0, 30)
+        password.set_size_request(0, 30)
+        login.set_size_request(0, 50)
+
+        newAccountBox.set_halign(Gtk.Align.CENTER)
+        forgotPassword.set_halign(Gtk.Align.END)
 
         login.connect("clicked", signInClicked)
 
@@ -80,8 +94,13 @@ class Window(Gtk.Window):
         addStyleContext(login, "login")
         addStyleContext(email, ["email", "input-field"])
         addStyleContext(password, ["password", "input-field"])
-
-        addBoxItems(signInContainer, [title, email, password, login], 5)
+        addStyleContext(forgotPassword, "forgotPassword")
+        addStyleContext(newAccountBox, "newAccountBox")
+        addStyleContext(newAccount, "newAccount")
+        addStyleContext(newAccountLink, "newAccountLink")
+        
+        addBoxItems(newAccountBox, [newAccount, newAccountLink], 0)
+        addBoxItems(signInContainer, [title, email, password, forgotPassword, login, newAccountBox], 5)
         grid.add(signInContainer)
         container.pack_start(grid, True, False, 0)
         
