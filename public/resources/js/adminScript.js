@@ -9,8 +9,7 @@ databaseRequest("http://localhost:3001/south-coast-crawlers/events/60acf26b00f32
            console.log(info.username)
         
        })
-   })
-    
+   })  
 })
 
 
