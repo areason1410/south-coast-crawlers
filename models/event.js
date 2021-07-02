@@ -38,6 +38,7 @@ const eventSchema = new mongoose.Schema({
         required: true,
         default: "https://images.dailyhive.com/20180424105459/shutterstock_717270061.jpg"
     }
+    
 })
 
 module.exports = mongoose.model("Event", eventSchema)

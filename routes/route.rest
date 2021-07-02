@@ -68,4 +68,3 @@ Content-Type: application/json
     "eventName": "yabbungus",
     "moderators" : ["test", "test"]
 }
-
