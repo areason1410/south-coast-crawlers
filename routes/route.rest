@@ -93,3 +93,7 @@ Content-Type: application/json
   ]
 
 }
+
+###
+
+GET http://localhost:3000/south-coast-crawlers/ruleset/60e1c43bd63c1a3e66a17024
