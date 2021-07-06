@@ -28,12 +28,14 @@
     //routers
     const accountRouter = require("./routes/accounts")
     const eventRouter = require("./routes/events")
+    const rulesetRouter = require("./routes/rulesets")
 
     //use
     app.use(express.json());
     app.use(express.static('public'));
     app.use("/south-coast-crawlers/accounts", accountRouter);
     app.use("/south-coast-crawlers/events", eventRouter);
+    app.use("/south-coast-crawlers/ruleset", rulesetRouter);
     
     //webpage directiories
     app.get("/", (req, res) => {

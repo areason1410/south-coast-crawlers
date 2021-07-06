@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body:before {
+  z-index: -100;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 0%;
+  background: radial-gradient(
+      circle at top right,
+      #f5d5ed,
+      rgba(255, 0, 0, 0) 70.71%
+    ),
+    radial-gradient(circle at top left, #f0a2a1, rgba(0, 0, 255, 0) 70.71%),
+    radial-gradient(circle at bottom left, #b5d0b3, rgba(0, 255, 0, 0) 70.71%),
+    radial-gradient(circle at bottom right, #bbbdf6, rgba(0, 255, 0, 0) 70.71%);
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.title {
+  font-size: 29px;
+  font-family: "Nunito Sans", sans-serif;
+  margin-top: 0;
+}
+
+.material-icons {
+  margin-top: 6px;
+}
+
+#infoContainer {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 20px;
+  line-height: 40px;
+  margin-left: 15px;
+  margin-bottom: 40px;
+}
+
+#imgContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.profilePicture {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+}
+
+.button {
+  height: 50px;
+  margin-left: 15px;
+  margin-right: 15px;
+  font-family: "Nunito Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 25px;
+  border-radius: 7px;
+  background: rgb(187, 189, 246);
+  background: linear-gradient(
+    299deg,
+    rgba(187, 189, 246, 1) 0%,
+    rgba(234, 167, 218, 1) 37%,
+    rgba(235, 131, 129, 1) 100%
+  );
+}
