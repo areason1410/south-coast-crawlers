@@ -77,31 +77,6 @@
    width: 100%;  
 }
 
-/*
-.leaderboard {
-    position: absolute;  
-    left: 11.73%; 
-    right: 80.27%;
-    /*top: 14%;
-    bottom: 26%; 
-}
-
-.settings {
-    position: absolute; 
-    left: 80.53%;
-    right: 11.47%;
-    /* top: 14%;
-    bottom: 26%; 
-}
-
-.points {
-    position: absolute; 
-    left: 46.13%;
-    right: 45.87%;
-    /* top: 14%;
-    bottom: 26%; */
-}  
-
 .buttons {
     display: flex;
     flex-direction: column;
@@ -110,4 +85,5 @@
 .navBar {
     display: flex;
     justify-content: space-evenly;
+    max-height: 3rem;
 }
