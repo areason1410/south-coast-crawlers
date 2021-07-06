@@ -10,10 +10,10 @@
     <link rel="stylesheet" href="resources/css/background.css">
     <link rel="stylesheet" href="resources/css/fonts.css">
     <link rel="stylesheet" href="resources/css/colours.css">
-    <script
-    src="https://kit.fontawesome.com/64d58efce2.js"
-    crossorigin="anonymous"
-  ></script>
+    <script defer src="resources/js/requests.js"></script>
+    <script defer src="resources/js/login.js"></script>
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+
 </head>
 <title>South Coast Crawlers</title> 
 </head>
@@ -22,15 +22,16 @@
      <div class="forms-container">
          <div class="signin-signup">
              <h1 class="Header">South Coast Crawlers</h1>
-            <form action="" class="sign-in-form">
+             <div id="error"></div>
+            <form action="/" class="sign-in-form" method="GET" >
                 <h2 class="title">Sign In</h2>
                 <div class="input-field">
                     <i class="fas fa-user"></i>
-                    <input type="text" placeholder="Email">
+                    <input id="email" type="text" placeholder="Email" required>
                 </div>
                 <div class="input-field">
                     <i class="fas fa-lock"></i>
-                    <input type="password" placeholder="Password">
+                    <input id="password" type="password" placeholder="Password" >
                     
                 </div>
                 <div class="FP">
@@ -38,11 +39,10 @@
                         <label id="FP">Forgot Password?</label>
                     </a>
                 </div>
-                <input type="submit" value="Sign In" class="btn solid">
+                <input id="signin" type="button" value="Sign In" class="btn solid">
                 <div class="SI">
                 Don't have an account? <a href="#" class="SI"><label id="SI">Sign Up.</label></a>
                 </div>
-            
                 </div>
                 
 
